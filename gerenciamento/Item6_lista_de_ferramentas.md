@@ -20,6 +20,6 @@ Foram consideradas ferramentas também os frameworks de programação utilizados
 
 ## Frameworks para Implementação
 - [Rails](https://rubyonrails.org/)
-- Ferramenta de testes
-- Ferramenta de documentação
+- [RSpec](http://rspec.info/)
+- [YARD](https://yardoc.org/index.html)
 
