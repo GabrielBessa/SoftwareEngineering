@@ -30,7 +30,9 @@ Acreditamos que esta metologia será boa para nosso projeto principalmente em qu
 
 #Cronograma do Projeto
 
-**inserir Gantt chart com o cronograma**
+O cronograma para o projeto está resumido no gráfico abaixo.
+
+![](../assets/images/gantt_chart.png)
 
 ##Cronograma do Projeto - Lista
 Abaixo o cronograma do projeto, separado em semanas, detalhando quais aspectos serão trabalhados em cada semana
@@ -65,6 +67,11 @@ Abaixo o cronograma do projeto, separado em semanas, detalhando quais aspectos s
 ####Semana 10~11 (3 ~ 17 junho)
 	- Finalização do projeto
 
+# Controle de Qualidade
+
+Para garantir a qualidade do sistema utilizaremos a metodologia TDD (Test-Driven Development), que consiste em escrever os testes do sistema **antes** de codificar cada parte do sistema em si. Assim, poderemos garantir um nível de qualidade para o todo o sistema que for codificado.
+
+Além disso, no período de finalização do projeto será feito um teste alpha do sistema.
 #Referências
 [1] SE Vocab, "Kanban". https://pascal.computer.org/sev_display/search.action
 [2] Collab Net, An Introduction to Kanban Methodology. https://resources.collab.net/agile-101/what-is-kanban
