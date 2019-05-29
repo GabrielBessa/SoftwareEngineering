@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event_center.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @event_center.address %>
+</p>
+
+<%= link_to 'Edit', edit_event_center_path(@event_center) %> |
+<%= link_to 'Back', event_centers_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Buy Tickets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Buyer</th>
+      <th>Value</th>
+      <th>Bought moment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buy_tickets.each do |buy_ticket| %>
+      <tr>
+        <td><%= buy_ticket.ticket %></td>
+        <td><%= buy_ticket.buyer %></td>
+        <td><%= buy_ticket.value %></td>
+        <td><%= buy_ticket.bought_moment %></td>
+        <td><%= link_to 'Show', buy_ticket %></td>
+        <td><%= link_to 'Edit', edit_buy_ticket_path(buy_ticket) %></td>
+        <td><%= link_to 'Destroy', buy_ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Buy Ticket', new_buy_ticket_path %>

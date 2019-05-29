@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @presentation.event %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @presentation.date %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @presentation.hour %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @presentation.range %>
+</p>
+
+<%= link_to 'Edit', edit_presentation_path(@presentation) %> |
+<%= link_to 'Back', presentations_path %>
