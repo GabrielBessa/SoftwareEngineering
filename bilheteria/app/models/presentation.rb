@@ -1,4 +1,4 @@
 class Presentation < ApplicationRecord
-  has_one :presentation_room
+  has_many :event, through: :presentation_room
   belongs_to :event
 end

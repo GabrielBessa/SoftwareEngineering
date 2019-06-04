@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   resources :events
   resources :event_classes
   resources :event_centers
-  resources :phones
-  resources :countries
   resources :addresses
   resources :states
   resources :cities

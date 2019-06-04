@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_213705) do
+ActiveRecord::Schema.define(version: 2019_06_04_120810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 2019_05_23_213705) do
     t.integer "event_type"
     t.date "begin_date"
     t.date "end_date"
-    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -149,6 +148,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_213705) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
   end
 
 end
