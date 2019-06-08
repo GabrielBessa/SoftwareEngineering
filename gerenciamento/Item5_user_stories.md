@@ -9,19 +9,19 @@ Os atores do sistema são:
 2. Usuário visitante 
 3. Dono de evento
 
-#Observações
+# Observações
 Os usuários visitantes são aqueles que já possuem um cadastro e já fizeram a autenticação com seus dados cadastrais.
 
 Os usuários donos de evento são os usuários visitantes que já adicionaram um evento. Eles são donos somente dos eventos que eles mesmos adicionaram.
 
-#Histórias de usuários sem cadastro
+# Histórias de usuários sem cadastro
 
 Como um **usuário sem cadastro**, quero **poder me cadastrar no sistema, utilizando CPF, email e uma senha de minha escolha** para poder visualizar os eventos disponíveis, comprar ingressos para eventos e cadastrar eventos.
 
 **Restrições:** 
 Para se cadastrar será necessário um endereço válido de email que não esteja cadastrado por nenhum outro usuário.
 
-#Histórias de usuários visitantes
+# Histórias de usuários visitantes
 
 Como um **usuário visitante** quero **poder visualizar eventos disponíveis no sistema** para ver quais são de meu interesse.
 
@@ -40,7 +40,7 @@ Como um **usuário visitante** quero poder **cadastrar eventos dos quais serei d
 
 Como um **usuário visitante** quero poder **cancelar meu cadastro no sistema** para não mais utilizá-lo.
 
-#Histórias de Donos de Eventos
+# Histórias de Donos de Eventos
 Como um **dono de evento** quero poder **visualizar os eventos que foram criados por mim** para ter mais informações sobre estes.
 
 Como um **dono de evento** quero poder **saber quantos ingressos já foram comprados** dos meus eventos.
