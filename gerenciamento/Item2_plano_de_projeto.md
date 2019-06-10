@@ -3,9 +3,11 @@ Este documento é o plano de projeto para o desenvolvimento do sistema de venda 
 
 #Introdução
 
-O projeto de Engenharia de Software vai consistir em um sistema de venda de ingressos. Ele será implementado como um webapp. **Complementar com informações extras conforme o projeto for caminhando**
+O projeto de Engenharia de Software vai consistir em um sistema de venda de ingressos. Este projeto deverá estar disponível através da internet.
 
-Para uma descrição mais detalhada do sistema consulte o [documento de visão](#blank) **Documento de visão ainda não foi feito**
+Esta versão do sistema deverá ser desenvolvida apenas para propósitos de demonstração, e não será colocada em produção para um público maior do que a sala de aula. O objetivo deste projeto é desenvolver os conhecimentos adquiridos em sala de aula sobre os processos relacionados à engenharia de software.
+
+Para uma descrição mais detalhada do sistema, incluindo o escopo do projeto, consulte o [documento de visão](#blank) **Documento de visão ainda não foi feito**
 
 Para uma descrição mais detalhada das features do sistema consulte o [documento de requisitos](item1_levantamento_de_requisitos.md)
 
@@ -13,10 +15,20 @@ Para uma descrição mais detalhada das features do sistema consulte o [document
 
 ##Equipe
 
-A equipe do projeto será composta por 3 participantes: **Listar todos**.
+A equipe do projeto será composta por 3 participantes: 
+Giovanni M Guidini - 16/0122660
+[COMPLETAR AQUI]
+
 ##Ferramentas
 
 Para este projeto utilizaremos diversas ferramentas disponíveis na Internet para atingir fins específicos dentro do projeto. A lista completa de Ferramentas utilizadas pode ser consultada na [lista de ferramentas](Item6_lista_de_ferramentas.md)
+
+#Análise de Risco
+
+Os riscos neste projeto são considerador mínimos. Isso se deve principalmente ao escopo estar bem definido e a certeza de não haver mudança nos requisitos do projeto. Além disso o projeto em si não é muito inovador, existindo muitos sistemas nos quais podemos nos basear para auxiliar-nos na realização deste projeto.
+
+A maior fonte de riscos identificada é a restrição de tempo. Os membros do grupo, ao longo do semestre, terão diversas outras atividades além do projeto, que podem complicar o andamento do mesmo.
+Para evitar riscos desta natureza foi criado um cronograma de atividades para a realização do projeto, que deverá ser seguido da melhor maneira possível.
 
 #Gerenciamento do Projeto
 A metodologia de gerenciamento de projeto escolhida foi o Kanban. Kanban promotes continuous collaboration and encourages active, ongoing learning and improving by defining the best possible team workflow [2]. Esta metodologia está centrada em um _kanban board_: in software development, a visual representation of work for developers who pull tasks from the task backlog; used for on-demand or resource-bound scheduling [1].
