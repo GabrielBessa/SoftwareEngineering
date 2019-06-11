@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /events
   # GET /events.json
   def index
@@ -25,7 +25,13 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
+    @age_group = AgeGroup.ids.sample
+    @event_class = EventClass.ids.sample
+    if user_signed_in?
+      @event.user_id = current_user.id
+      @event.age_group_id = @age_group.id
+      @event.event_class_id = @event_class.id
+    end
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -71,4 +77,6 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name, :begin_date, :end_date)
     end
+
+    
 end

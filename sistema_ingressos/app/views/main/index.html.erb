@@ -1,14 +1,51 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div class="container">
+  <h1>Página Inicial</h1>
+  
+  <li> 
+    <%= link_to 'Registrar Conta', new_user_registration_path %>
+  </li>
 
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Login', new_user_session_path %>
-<%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
+  <li> 
+    <%= link_to 'Login', new_user_session_path %>
+  </li>
+
+  <li> 
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
+  </li>
+
+  <li>
+    <%= link_to 'Criar Evento', new_event_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Criar Apresentação', new_presentation_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Criar sala de apresentação', new_presentation_room_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Estabelecer faixa etária', age_groups_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Definir Local', new_address_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Definir classe do evento', new_event_class_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Definir centro do evento', new_event_center_path %>
+  </li>
+
+</div>
+
 
 <%
 =begin%> 
-<%= link_to 'Registrar Conta', new_user_registration_path %>
 <%= link_to 'Registrar Conta', new_user_registration_path %>
 <%= link_to 'Registrar Conta', new_user_registration_path %>
 <%= link_to 'Registrar Conta', new_user_registration_path %>

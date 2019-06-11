@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_11_155743) do
+ActiveRecord::Schema.define(version: 2019_06_11_183618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "city_id"
+    t.index ["city_id"], name: "index_addresses_on_city_id"
   end
 
   create_table "age_groups", force: :cascade do |t|
@@ -34,6 +36,10 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.float "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ticket_id"
+    t.bigint "user_id"
+    t.index ["ticket_id"], name: "index_buy_tickets_on_ticket_id"
+    t.index ["user_id"], name: "index_buy_tickets_on_user_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -46,6 +52,8 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "address_id"
+    t.index ["address_id"], name: "index_event_centers_on_address_id"
   end
 
   create_table "event_classes", force: :cascade do |t|
@@ -60,6 +68,12 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "event_class_id"
+    t.bigint "age_group_id"
+    t.index ["age_group_id"], name: "index_events_on_age_group_id"
+    t.index ["event_class_id"], name: "index_events_on_event_class_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "payment_methods", force: :cascade do |t|
@@ -74,11 +88,19 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.float "change_money"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "buy_ticket_id"
+    t.bigint "payment_method_id"
+    t.index ["buy_ticket_id"], name: "index_payments_on_buy_ticket_id"
+    t.index ["payment_method_id"], name: "index_payments_on_payment_method_id"
   end
 
   create_table "presentation_rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "presentation_id"
+    t.bigint "room_id"
+    t.index ["presentation_id"], name: "index_presentation_rooms_on_presentation_id"
+    t.index ["room_id"], name: "index_presentation_rooms_on_room_id"
   end
 
   create_table "presentations", force: :cascade do |t|
@@ -93,6 +115,8 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.boolean "crowded"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "event_center_id"
+    t.index ["event_center_id"], name: "index_rooms_on_event_center_id"
   end
 
   create_table "ticket_types", force: :cascade do |t|
@@ -105,6 +129,12 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
   create_table "tickets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ticket_type_id"
+    t.bigint "presentation_room_id"
+    t.bigint "user_id"
+    t.index ["presentation_room_id"], name: "index_tickets_on_presentation_room_id"
+    t.index ["ticket_type_id"], name: "index_tickets_on_ticket_type_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -119,4 +149,19 @@ ActiveRecord::Schema.define(version: 2019_06_11_155743) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "cities"
+  add_foreign_key "buy_tickets", "tickets"
+  add_foreign_key "buy_tickets", "users"
+  add_foreign_key "event_centers", "addresses"
+  add_foreign_key "events", "age_groups"
+  add_foreign_key "events", "event_classes"
+  add_foreign_key "events", "users"
+  add_foreign_key "payments", "buy_tickets"
+  add_foreign_key "payments", "payment_methods"
+  add_foreign_key "presentation_rooms", "presentations"
+  add_foreign_key "presentation_rooms", "rooms"
+  add_foreign_key "rooms", "event_centers"
+  add_foreign_key "tickets", "presentation_rooms"
+  add_foreign_key "tickets", "ticket_types"
+  add_foreign_key "tickets", "users"
 end
