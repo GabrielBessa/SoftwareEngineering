@@ -1,13 +1,5 @@
 <div class="container">
   <h1>Página Inicial</h1>
-  
-  <li> 
-    <%= link_to 'Registrar Conta', new_user_registration_path %>
-  </li>
-
-  <li> 
-    <%= link_to 'Login', new_user_session_path %>
-  </li>
 
   <li> 
     <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
@@ -18,22 +10,6 @@
   </li>
 
   <li>
-    <%= link_to 'Criar Apresentação', new_presentation_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Criar sala de apresentação', new_presentation_room_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Estabelecer faixa etária', age_groups_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Definir Local', new_address_path %>
-  </li>
-
-  <li>
     <%= link_to 'Definir classe do evento', new_event_class_path %>
   </li>
 
@@ -41,17 +17,53 @@
     <%= link_to 'Definir centro do evento', new_event_center_path %>
   </li>
 
+  <li>
+    <%= link_to 'Tipos de eventos', event_classes_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Criar Apresentação', new_presentation_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Salas de apresentação', presentation_rooms_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Salas', rooms_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Estabelecer faixa etária', age_groups_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Comprar Ingressos', buy_tickets_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Tipos de ingresso', ticket_types_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Ingressos', tickets_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Pagamento', payments_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Métodos de pagamento', payment_methods_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Definir Local', new_address_path %>
+  </li>
+
+  <li>
+    <%= link_to 'Cidades', cities_path %>
+  </li>
+
 </div>
 
-
-<%
-=begin%> 
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>
-<%= link_to 'Registrar Conta', new_user_registration_path %>  
-<%
-=end%>

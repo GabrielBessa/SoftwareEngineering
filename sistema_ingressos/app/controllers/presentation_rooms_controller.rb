@@ -25,7 +25,10 @@ class PresentationRoomsController < ApplicationController
   # POST /presentation_rooms.json
   def create
     @presentation_room = PresentationRoom.new(presentation_room_params)
-
+    if user_signed_in?
+      @presentation_room.room_id = Room.ids.sample
+      @presentation_room.presentation_id = Presentation.ids.sample
+    end
     respond_to do |format|
       if @presentation_room.save
         format.html { redirect_to @presentation_room, notice: 'Presentation room was successfully created.' }

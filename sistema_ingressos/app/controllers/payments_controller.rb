@@ -25,7 +25,9 @@ class PaymentsController < ApplicationController
   # POST /payments.json
   def create
     @payment = Payment.new(payment_params)
-
+    if user_signed_in?
+      @payment.payment_method_id = PaymentMethod.ids.sample
+    end
     respond_to do |format|
       if @payment.save
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }

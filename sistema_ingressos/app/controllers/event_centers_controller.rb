@@ -25,7 +25,9 @@ class EventCentersController < ApplicationController
   # POST /event_centers.json
   def create
     @event_center = EventCenter.new(event_center_params)
-
+    if user_signed_in?
+      @event_center.address_id = Address.ids.sample
+    end
     respond_to do |format|
       if @event_center.save
         format.html { redirect_to @event_center, notice: 'Event center was successfully created.' }

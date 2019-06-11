@@ -25,7 +25,10 @@ class BuyTicketsController < ApplicationController
   # POST /buy_tickets.json
   def create
     @buy_ticket = BuyTicket.new(buy_ticket_params)
-
+    if user_signed_in?
+      @buy_ticket.user_id = current_user.id
+      @buy_ticket.ticket_id = Ticket.ids.sample
+    end
     respond_to do |format|
       if @buy_ticket.save
         format.html { redirect_to @buy_ticket, notice: 'Buy ticket was successfully created.' }

@@ -25,8 +25,11 @@ class PresentationsController < ApplicationController
   # POST /presentations.json
   def create
     @presentation = Presentation.new(presentation_params)
-
+    if user_signed_in?
+      @presentation.event_id = Event.ids.sample
+    end
     respond_to do |format|
+      
       if @presentation.save
         format.html { redirect_to @presentation, notice: 'Presentation was successfully created.' }
         format.json { render :show, status: :created, location: @presentation }

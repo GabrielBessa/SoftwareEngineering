@@ -25,12 +25,10 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    @age_group = AgeGroup.ids.sample
-    @event_class = EventClass.ids.sample
     if user_signed_in?
       @event.user_id = current_user.id
-      @event.age_group_id = @age_group.id
-      @event.event_class_id = @event_class.id
+      @event.age_group_id = AgeGroup.ids.sample
+      @event.event_class_id = EventClass.ids.sample
     end
     respond_to do |format|
       if @event.save

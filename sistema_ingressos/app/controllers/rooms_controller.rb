@@ -25,7 +25,9 @@ class RoomsController < ApplicationController
   # POST /rooms.json
   def create
     @room = Room.new(room_params)
-
+    if user_signed_in?
+      @room.event_center_id = EventCenter.ids.sample
+    end
     respond_to do |format|
       if @room.save
         format.html { redirect_to @room, notice: 'Room was successfully created.' }

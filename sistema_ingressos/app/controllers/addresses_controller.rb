@@ -25,7 +25,9 @@ class AddressesController < ApplicationController
   # POST /addresses.json
   def create
     @address = Address.new(address_params)
-
+    if user_signed_in?
+      @address.city_id = City.ids.sample
+    end
     respond_to do |format|
       if @address.save
         format.html { redirect_to @address, notice: 'Address was successfully created.' }
