@@ -1,2 +1,0 @@
-class BuyTicket < ApplicationRecord
-end
