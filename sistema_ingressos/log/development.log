@@ -157,3 +157,115 @@ Migrating to CreateBuyTickets (20190611121258)
   ↳ /home/gabriel/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/gabriel/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-06-11 09:20:40 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gabriel/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/gabriel/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/gabriel/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 16ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-06-11 09:21:06 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:19
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1908ms (Views: 1901.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-06-11 09:21:18 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (49.1ms)
+  Rendered users/new.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 132ms (Views: 116.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/new" for ::1 at 2019-06-11 09:21:21 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-06-11 09:29:45 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gabriel/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 7233ms (Views: 7194.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users" for ::1 at 2019-06-11 09:30:12 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0kz5UzkiP76/jyCBeBRPEk5zeFeYJzdj8mQkXuYhSmINspN7xHbeoJtz5LEt6o7tWsDAKdgleaWbRGLYLaThw==", "user"=>{"name"=>"Gabriel", "cpf"=>"030150", "birth(1i)"=>"2014", "birth(2i)"=>"2", "birth(3i)"=>"12", "email"=>"", "login"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "cpf", "birth", "email", "login", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Gabriel"], ["cpf", "030150"], ["birth", "2014-02-12"], ["email", ""], ["login", ""], ["password", ""], ["created_at", "2019-06-11 12:30:12.011774"], ["updated_at", "2019-06-11 12:30:12.011774"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 56ms (ActiveRecord: 50.6ms)
+
+
+Started GET "/users/1" for ::1 at 2019-06-11 09:30:12 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-06-11 09:30:16 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2019-06-11 09:30:27 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uo7DIQoIleWwZAD2R0epvJnXDs1bCaSkMp5FrWYeFF+NahDfW3+zHXvFhoWX6wIlWoiK9CSig+pneyGnQ3eYlQ==", "user"=>{"name"=>"Gabriel", "cpf"=>"03015079107", "birth(1i)"=>"2014", "birth(2i)"=>"2", "birth(3i)"=>"12", "email"=>"rofl@rofl.com", "login"=>"roflzaum", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "cpf" = $1, "email" = $2, "login" = $3, "password" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["cpf", "03015079107"], ["email", "rofl@rofl.com"], ["login", "roflzaum"], ["password", "rofl"], ["updated_at", "2019-06-11 12:30:27.925452"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (54.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 61ms (ActiveRecord: 55.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-06-11 09:30:27 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2019-06-11 09:30:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:19
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 80ms (Views: 78.8ms | ActiveRecord: 0.3ms)
+
+
