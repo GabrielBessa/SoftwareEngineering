@@ -3,17 +3,13 @@ require 'rails_helper'
 RSpec.describe CitiesController, type: :controller do
   let(:valid_attributes){
     {
-      street: "Rua dos danone",
-      neighborhood: "Quebrada dos danone",
-      number: 10
+      name: "Brasilia"
     }
   }
 
   let(:invalid_attributes){
     {
-      street: nil,
-      neighborhood: nil,
-      number: nil
+      name: nil
     }
   }
 
@@ -21,7 +17,7 @@ RSpec.describe CitiesController, type: :controller do
 
   describe "GET #index" do
     it "returns a success response" do
-      Address.create! valid_attributes
+      City.create! valid_attributes
       get :index, params: {}
       expect(response).to be_successful
     end
@@ -29,8 +25,8 @@ RSpec.describe CitiesController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      address = Address.create! valid_attributes
-      get :show, params: {id: address.to_param}
+      city = City.create! valid_attributes
+      get :show, params: {id: city.to_param}
       expect(response).to be_successful
     end
   end
@@ -44,29 +40,29 @@ RSpec.describe CitiesController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
-      address = Address.create! valid_attributes
-      get :edit, params: {id: address.to_param}
+      city = City.create! valid_attributes
+      get :edit, params: {id: city.to_param}
       expect(response).to be_successful
     end
   end  
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Address" do
+      it "creates a new city" do
         expect {
-          post :create, params: {address: valid_attributes}
+          post :create, params: {city: valid_attributes}
         }
       end
 
-      it "redirects to the created address" do
-        post :create, params: {address: valid_attributes}
-        expect(response).to redirect_to(Address.last)
+      it "redirects to the created city" do
+        post :create, params: {city: valid_attributes}
+        expect(response).to redirect_to(City.last)
       end 
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {address: invalid_attributes}
+        post :create, params: {city: invalid_attributes}
         expect(response).to be_successful
       end
     end
@@ -76,53 +72,51 @@ RSpec.describe CitiesController, type: :controller do
     context "with valid params" do
       let(:new_attributes){
         {
-          street: "Rua do Toddy",
-          neighborhood: "Quebrada do toddynho",
-          number: 20
+          name: "Florianopolis"
         }
       } 
 
-      it "updates the requested address" do
-        address = Address.create! valid_attributes
-        put :update, params: {id: address.to_param, address: new_attributes}
-        address.reload
-        expect(address.street).to eq("Rua do Toddy")
+      it "updates the requested city" do
+        city = City.create! valid_attributes
+        put :update, params: {id: city.to_param, city: new_attributes}
+        city.reload
+        expect(city.name).to eq("Florianopolis")
       end
 
       it "redirects to index" do
-        address = Address.create! valid_attributes
-        put :update, params: {id: address.to_param, address: valid_attributes}
-        expect(response).to redirect_to(address_url)
+        city = City.create! valid_attributes
+        put :update, params: {id: city.to_param, city: valid_attributes}
+        expect(response).to redirect_to(city_url)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        address = Address.create! valid_attributes
-        put :update, params: {id: address.to_param, address: invalid_attributes}
+        city = City.create! valid_attributes
+        put :update, params: {id: city.to_param, city: invalid_attributes}
         expect(response).to be_successful
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested address" do
-      address = Address.create! valid_attributes
+    it "destroys the requested city" do
+      city = City.create! valid_attributes
       begin
-        Address.where(address_id: address.id).each do |item|
+        City.where(city_id: city.id).each do |item|
           item.destroy!
         end
       rescue
       end
       expect {
-        delete :destroy, params: {id: address.to_param}
+        delete :destroy, params: {id: city.to_param}
       }
     end
 
-    it "redirects to the addresses list" do
-      address = Address.create! valid_attributes
-      delete :destroy, params: {id: address.to_param}
-      expect(response).to redirect_to(addresses_url)
+    it "redirects to the cities list" do
+      city = City.create! valid_attributes
+      delete :destroy, params: {id: city.to_param}
+      expect(response).to redirect_to(cities_url)
     end
   end
 end

@@ -48,13 +48,13 @@ RSpec.describe AgeGroupsController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Address" do
+      it "creates a new age group" do
         expect {
           post :create, params: {age_group: valid_attributes}
         }
       end
 
-      it "redirects to the created address" do
+      it "redirects to the created age group" do
         post :create, params: {age_group: valid_attributes}
         expect(response).to redirect_to(AgeGroup.last)
       end 
@@ -76,7 +76,7 @@ RSpec.describe AgeGroupsController, type: :controller do
         }
       } 
 
-      it "updates the requested address" do
+      it "updates the requested age group" do
         age = AgeGroup.create! valid_attributes
         put :update, params: {id: age.to_param, age_group: new_attributes}
         age.reload
@@ -100,7 +100,7 @@ RSpec.describe AgeGroupsController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested address" do
+    it "destroys the requested age group" do
       age = AgeGroup.create! valid_attributes
       begin
         AgeGroup.where(age_id: age.id).each do |item|
@@ -113,7 +113,7 @@ RSpec.describe AgeGroupsController, type: :controller do
       }
     end
 
-    it "redirects to the addresses list" do
+    it "redirects to the age groups list" do
       age = AgeGroup.create! valid_attributes
       delete :destroy, params: {id: age.to_param}
       expect(response).to redirect_to(age_groups_url)

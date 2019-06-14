@@ -50,13 +50,13 @@ RSpec.describe BuyTicketsController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Address" do
+      it "creates a new bought ticket" do
         expect {
           post :create, params: {buy_ticket: valid_attributes}
         }
       end
 
-      it "redirects to the created address" do
+      it "redirects to the created bought ticket" do
         post :create, params: {buy_ticket: valid_attributes}
         expect(response).to redirect_to(BuyTicket.last)
       end 
@@ -79,7 +79,7 @@ RSpec.describe BuyTicketsController, type: :controller do
         }
       } 
 
-      it "updates the requested address" do
+      it "updates the requested bought ticket" do
         ticket = BuyTicket.create! valid_attributes
         put :update, params: {id: ticket.to_param, buy_ticket: new_attributes}
         ticket.reload
@@ -103,7 +103,7 @@ RSpec.describe BuyTicketsController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested address" do
+    it "destroys the requested bought ticket" do
       ticket = BuyTicket.create! valid_attributes
       begin
         BuyTicket.where(buy_ticket_id: ticket.id).each do |item|
@@ -116,7 +116,7 @@ RSpec.describe BuyTicketsController, type: :controller do
       }
     end
 
-    it "redirects to the addresses list" do
+    it "redirects to the bought tickets list" do
       ticket = BuyTicket.create! valid_attributes
       delete :destroy, params: {id: ticket.to_param}
       expect(response).to redirect_to(buy_tickets_url)

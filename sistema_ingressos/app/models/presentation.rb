@@ -3,5 +3,5 @@ class Presentation < ApplicationRecord
   validates :hour, presence: true
 
   has_many :presentation_room
-  belongs_to :event
+  belongs_to :event, required: false
 end
