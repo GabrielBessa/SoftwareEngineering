@@ -75,6 +75,6 @@ gem 'devise'
 # gem 'simple_form'
 
 # Tool that will be used to test our code
-# group :development, :test do
-#   gem 'rspec-rails', '~> 3.8'
-# end
+group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+end
