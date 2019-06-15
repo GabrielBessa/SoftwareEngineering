@@ -1,4 +1,6 @@
 class EventCenter < ApplicationRecord
-  belongs_to :address
+  validates :name, presence: true
+
+  belongs_to :address, required: false
   has_many :room
 end
