@@ -7,9 +7,7 @@ RSpec.describe Address, type: :model do
     ad.street = "Rua Dom Bosco"
     ad.neighborhood = "Quebrada Dom Bosco"
     ad.number = 10
-    # expect(ad).to be_valid 
-    # se eu tirar a validacao da city, ele consegue criar address sem cidade
-    # e isso n deve acontecer
+    expect(ad).to be_valid 
   end
 
   it 'is not valid with nil attributes' do
@@ -17,7 +15,6 @@ RSpec.describe Address, type: :model do
     ad.street = nil
     ad.neighborhood = nil
     ad.number = nil
-
     expect(ad).to_not be_valid
   end
 

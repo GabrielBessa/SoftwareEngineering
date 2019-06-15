@@ -1,5 +1,5 @@
 class PresentationRoom < ApplicationRecord
-  belongs_to :room, required: false
-  belongs_to :presentation, required: false
+  belongs_to :room
+  belongs_to :presentation
   has_many :ticket
 end
