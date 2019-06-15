@@ -1,8 +1,17 @@
 Este documento reúne as histórias de usuário usadas como requisitos para o sistema.
 Cada conjunto de histórias está separado pelos atores à que elas se referem.
-
 Uma história possui uma descrição e uma lista de restrições que devem ser cumpridas.
 
+Giovanni M Guidini - 16/0122660
+Gabriel Bessa - 16/
+
+- [Atores](#atores)
+- [Observações](#observa%C3%A7%C3%B5es)
+- [Histórias de usuários sem cadastro](#hist%C3%B3rias-de-usu%C3%A1rios-sem-cadastro)
+- [Histórias de usuários visitantes](#hist%C3%B3rias-de-usu%C3%A1rios-visitantes)
+- [Histórias de Donos de Eventos](#hist%C3%B3rias-de-donos-de-eventos)
+
+# Atores
 Os atores do sistema são:
 
 1. Usuário sem cadastro

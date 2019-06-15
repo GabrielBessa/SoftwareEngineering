@@ -1,6 +1,16 @@
 Este documento traz considerações, restrições e justificativas para a arquitetura do sistema.
 Inspirado [neste template](http://www.utm.mx/~caff/doc/OpenUPWeb/openup/guidances/templates/architecture_notebook_BCD3507B.html), mas com muitas alterações devido à simplicidade de projeto.
 
+Giovanni M Guidini - 16/0122660
+Gabriel Bessa      - 16/
+
+- [Filosofia arquitetural](#filosofia-arquitetural)
+- [Requerimentos relevantes para a arquitetura](#requerimentos-relevantes-para-a-arquitetura)
+- [Estilo de arquitetura](#estilo-de-arquitetura)
+    - [Observação](#observa%C3%A7%C3%A3o)
+- [Visão Lógica da Arquitetura](#vis%C3%A3o-l%C3%B3gica-da-arquitetura)
+- [Referências](#refer%C3%AAncias)
+  
 # Filosofia arquitetural
 
 A filosofia arquitetural para este projeto será simplicidade. Será utilizada uma arquitetura simples de compreender e de implementar, preferencialmente uma arquitetura de referência que será reutilizada de um framework.
@@ -21,7 +31,7 @@ Foi decidido reutilizar a arquitetura disponibilizada pela framework Rails. Esse
 
 Para informações mais detalhadas sobre a arquitetura rails visite [este link](https://adrianmejia.com/ruby-on-rails-architectural-design/).
 
-###Observação
+### Observação
 A arquitetura descrita acima é a interna do Rails. Em verdade, para colocar o sistema em produção é necessário fazer uso de uma arquitetura do tipo Cliente-Servidor, com o sistema sendo um dos serviços providos por um servidor web.
 
 # Visão Lógica da Arquitetura
