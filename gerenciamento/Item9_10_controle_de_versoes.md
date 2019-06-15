@@ -3,7 +3,7 @@ Este documento apresenta uma descrição do processo de controle de versões ado
 Em seguida, como foi organizado o controle de versões para este trabalho, e explicações do básico necessário para utilizar a ferramenta.
 
 Giovanni M Guidini - 16/0122660
-Gabriel Bessa      - 16/
+Gabriel Bessa      - 16/0120811
 
 - [Sistema de Controle de Versões](#sistema-de-controle-de-vers%C3%B5es)
 - [Neste projeto](#neste-projeto)

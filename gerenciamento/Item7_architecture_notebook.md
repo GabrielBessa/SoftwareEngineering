@@ -2,7 +2,7 @@ Este documento traz considerações, restrições e justificativas para a arquit
 Inspirado [neste template](http://www.utm.mx/~caff/doc/OpenUPWeb/openup/guidances/templates/architecture_notebook_BCD3507B.html), mas com muitas alterações devido à simplicidade de projeto.
 
 Giovanni M Guidini - 16/0122660
-Gabriel Bessa      - 16/
+Gabriel Bessa      - 16/0120811
 
 - [Filosofia arquitetural](#filosofia-arquitetural)
 - [Requerimentos relevantes para a arquitetura](#requerimentos-relevantes-para-a-arquitetura)

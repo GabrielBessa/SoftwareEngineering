@@ -73,7 +73,6 @@ Abaixo o cronograma do projeto, separado em semanas, detalhando quais aspectos s
 	- Levantamento de Requisitos
 	- Levantamento das Ferramentas (item 6)
 	- Descrição do processo de controle de versões (item 9)
-	* Refinamento do plano de projeto no estilo Gantt Chart
 
 #### Semana 2 (7 ~ 15 de Abril)
 	- Documento de visão (item 4)
