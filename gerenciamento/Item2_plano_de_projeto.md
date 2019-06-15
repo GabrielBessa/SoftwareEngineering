@@ -1,7 +1,7 @@
 Este documento é o plano de projeto para o desenvolvimento do sistema de venda de ingressos que será o projeto de Engenharia de Software.
 
 Giovanni M Guidini - 16/0122660
-Gabriel Bessa	   - 16/
+Gabriel Bessa      - 16/0120811 
 
 - [Introdução](#introdu%C3%A7%C3%A3o)
 - [Organização do Projeto](#organiza%C3%A7%C3%A3o-do-projeto)
@@ -37,7 +37,7 @@ Para uma descrição mais detalhada das features do sistema consulte o [document
 
 A equipe do projeto será composta por 3 participantes: 
 Giovanni M Guidini - 16/0122660
-Gabriel Bessa	   - 16/
+Gabriel Bessa      - 16/0120811 
 
 ## Ferramentas
 
