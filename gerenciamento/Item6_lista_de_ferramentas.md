@@ -23,3 +23,6 @@ Foram consideradas ferramentas também os frameworks de programação utilizados
 - [RSpec](http://rspec.info/)
 - [YARD](https://yardoc.org/index.html)
 
+## Ambiente de Desenvolvimento
+- [Visual Studio Code](https://code.visualstudio.com/) (editor de texto)
+- Extensão para Visual Studio Code [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby), por Peng Lv
