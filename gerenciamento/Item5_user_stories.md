@@ -3,7 +3,7 @@ Cada conjunto de histórias está separado pelos atores à que elas se referem.
 Uma história possui uma descrição e uma lista de restrições que devem ser cumpridas.
 
 Giovanni M Guidini - 16/0122660
-Gabriel Bessa - 16/
+Gabriel Bessa      - 16/0120811
 
 - [Atores](#atores)
 - [Observações](#observa%C3%A7%C3%B5es)

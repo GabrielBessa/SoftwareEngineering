@@ -53,6 +53,7 @@ Dados a serem consultados:
   - Cidade
   - Estado
   - Faixa Etária do evento
+  - 
 ## Observações:  
   - Só o usuário que criou o evento pode alterar, descadastrar o evento.
   - Uma vez que um ingresso de alguma apresentação tenha sido comprado, o evento não pode ser excluido mais

@@ -11,13 +11,6 @@ Gabriel Bessa      - 16/0120811
 - [Gerenciamento do Projeto](#gerenciamento-do-projeto)
 - [Cronograma do Projeto](#cronograma-do-projeto)
 	- [Cronograma do Projeto - Lista](#cronograma-do-projeto---lista)
-			- [Semana 1 ( 1 ~ 7 abril)](#semana-1--1--7-abril)
-			- [Semana 2 (7 ~ 15 de Abril)](#semana-2-7--15-de-abril)
-			- [Semana 3~4 ( 15 ~ 29 abril)](#semana-34--15--29-abril)
-			- [Semana 5~6 (29 abril ~ 13 maio)](#semana-56-29-abril--13-maio)
-			- [Semana 7~8 (13 ~ 27 maio)](#semana-78-13--27-maio)
-			- [Semana 9 (27 ~ 3 de junho)](#semana-9-27--3-de-junho)
-			- [Semana 10~11 (3 ~ 17 junho)](#semana-1011-3--17-junho)
 - [Controle de Qualidade](#controle-de-qualidade)
 - [Referências](#refer%C3%AAncias)
   
@@ -27,7 +20,7 @@ O projeto de Engenharia de Software vai consistir em um sistema de venda de ingr
 
 Esta versão do sistema deverá ser desenvolvida apenas para propósitos de demonstração, e não será colocada em produção para um público maior do que a sala de aula. O objetivo deste projeto é desenvolver os conhecimentos adquiridos em sala de aula sobre os processos relacionados à engenharia de software.
 
-Para uma descrição mais detalhada do sistema, incluindo o escopo do projeto, consulte o [documento de visão](#blank) **Documento de visão ainda não foi feito**
+Para uma descrição mais detalhada do sistema, incluindo o escopo do projeto, consulte o [documento de visão](Item4_vision_doc.pdf)
 
 Para uma descrição mais detalhada das features do sistema consulte o [documento de requisitos](item1_levantamento_de_requisitos.md)
 
@@ -51,6 +44,7 @@ A maior fonte de riscos identificada é a restrição de tempo. Os membros do gr
 Para evitar riscos desta natureza foi criado um cronograma de atividades para a realização do projeto, que deverá ser seguido da melhor maneira possível.
 
 # Gerenciamento do Projeto
+
 A metodologia de gerenciamento de projeto escolhida foi o Kanban. Kanban promotes continuous collaboration and encourages active, ongoing learning and improving by defining the best possible team workflow [2]. Esta metodologia está centrada em um _kanban board_: in software development, a visual representation of work for developers who pull tasks from the task backlog; used for on-demand or resource-bound scheduling [1].
 
 Os princípios da metodologia Kanban [2] são:
@@ -69,33 +63,33 @@ O cronograma para o projeto está resumido no gráfico abaixo.
 ## Cronograma do Projeto - Lista
 Abaixo o cronograma do projeto, separado em semanas, detalhando quais aspectos serão trabalhados em cada semana
 
-#### Semana 1 ( 1 ~ 7 abril)
+#### Semana 1 ( 1 ~ 7 abril) <!-- omit in toc -->
 	- Levantamento de Requisitos
 	- Levantamento das Ferramentas (item 6)
 	- Descrição do processo de controle de versões (item 9)
 
-#### Semana 2 (7 ~ 15 de Abril)
+#### Semana 2 (7 ~ 15 de Abril) <!-- omit in toc -->
 	- Documento de visão (item 4)
 	- Começar a definir arquitetura do projeto (modelagem do BD e design geral)
 	- Definir alguns modelos de uso (item 5)
 
-#### Semana 3~4 ( 15 ~ 29 abril)
+#### Semana 3~4 ( 15 ~ 29 abril) <!-- omit in toc -->
 	- Implementação do BD
 	- Design das views principais do projeto
 
-#### Semana 5~6 (29 abril ~ 13 maio)
+#### Semana 5~6 (29 abril ~ 13 maio) <!-- omit in toc -->
 	- Implementação das princiapis views do projeto
 
-#### Semana 7~8 (13 ~ 27 maio)
+#### Semana 7~8 (13 ~ 27 maio) <!-- omit in toc -->
 	- Implementação de Login e Senha
 	- Implementação de outros requisitos do projeto
 
-#### Semana 9 (27 ~ 3 de junho)
+#### Semana 9 (27 ~ 3 de junho) <!-- omit in toc -->
 	- Revisão dos requisitos
 	- Revisão da documentação
 	- Teste alpha
 
-#### Semana 10~11 (3 ~ 17 junho)
+#### Semana 10~11 (3 ~ 17 junho) <!-- omit in toc -->
 	- Finalização do projeto
 
 # Controle de Qualidade

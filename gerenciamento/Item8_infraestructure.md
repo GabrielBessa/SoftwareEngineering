@@ -1,5 +1,8 @@
 Este documento traz sugestões de infraestrutura possíveis para colocar em produção o sistema de venda de ingressos.
 
+Giovanni M Guidini - 16/0122660
+Gabriel Bessa      - 16/0120811
+
 # Limites mínimos de armazenamento
 O sistema de ingressos não possui grandes necessidades de armazenamento. O tamanho a ser reservado para o sistema depende da expectativa do tamanho da base de usuários e da quantidade de eventos na base de dados. É sugerido que o sistema **tenha pelo menos 2TB de armazenamento, independente do tamanho estimado.**
 

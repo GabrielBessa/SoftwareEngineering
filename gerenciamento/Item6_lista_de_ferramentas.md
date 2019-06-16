@@ -2,6 +2,9 @@ Este documento traz uma lista com as principais ferramentas utilizadas no desesn
 
 Foram consideradas ferramentas também os frameworks de programação utilizados.
 
+Giovanni M Guidini - 16/0122660
+Gabriel Bessa      - 16/0120811
+
 ## Ferramentas para gerenciamento do projeto
 
 #### Quadro de KanBan
