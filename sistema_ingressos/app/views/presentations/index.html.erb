@@ -15,7 +15,7 @@
     <% @presentations.each do |presentation| %>
       <tr>
         <td><%= presentation.date %></td>
-        <td><%= presentation.hour %></td>
+        <td><%= presentation.hour.to_s(:time) %></td>
         <td><%= link_to 'Show', presentation %></td>
         <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
         <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

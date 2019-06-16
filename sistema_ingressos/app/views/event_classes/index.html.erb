@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Event Classes</h1>
 
 <table>
@@ -15,8 +14,10 @@
       <tr>
         <td><%= event_class.description %></td>
         <td><%= link_to 'Show', event_class %></td>
-        <td><%= link_to 'Edit', edit_event_class_path(event_class) %></td>
-        <td><%= link_to 'Destroy', event_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.admin == true %>  
+          <td><%= link_to 'Edit', edit_event_class_path(event_class) %></td>
+          <td><%= link_to 'Destroy', event_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

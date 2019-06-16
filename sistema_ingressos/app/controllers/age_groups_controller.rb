@@ -1,4 +1,5 @@
 class AgeGroupsController < ApplicationController
+  before_action :check_admin
   before_action :set_age_group, only: [:show, :edit, :update, :destroy]
 
   # GET /age_groups
@@ -70,5 +71,11 @@ class AgeGroupsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def age_group_params
       params.require(:age_group).permit(:age)
+    end
+
+    def check_admin
+      unless current_user.admin?
+        redirect_to root_path        
+      end
     end
 end

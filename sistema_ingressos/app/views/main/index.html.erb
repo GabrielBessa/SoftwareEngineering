@@ -1,20 +1,16 @@
 <div class="container">
   <h1>Página Inicial</h1>
-  
+
   <li> 
     <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
   </li>
-
+  
   <li>
-    <%= link_to 'Criar Evento', new_event_path %>
+    <%= link_to 'Evento', events_path %>
   </li>
 
   <li>
-    <%= link_to 'Definir classe do evento', new_event_class_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Definir centro do evento', new_event_center_path %>
+    <%= link_to 'Centros de eventos', event_centers_path %>
   </li>
 
   <li>
@@ -22,7 +18,7 @@
   </li>
 
   <li>
-    <%= link_to 'Criar Apresentação', new_presentation_path %>
+    <%= link_to 'Apresentações', presentations_path %>
   </li>
 
   <li>
@@ -31,10 +27,6 @@
 
   <li>
     <%= link_to 'Salas', rooms_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Estabelecer faixa etária', age_groups_path %>
   </li>
 
   <li>
@@ -58,12 +50,11 @@
   </li>
 
   <li>
-    <%= link_to 'Definir Local', new_address_path %>
+    <%= link_to 'Locais', addresses_path %>
   </li>
 
   <li>
     <%= link_to 'Cidades', cities_path %>
   </li>
-
 </div>
 

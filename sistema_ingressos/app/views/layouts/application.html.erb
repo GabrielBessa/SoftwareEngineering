@@ -16,6 +16,7 @@
     <%if user_signed_in?%>
       <%= p @user.email %>
       <%= p @user.id %>
+      <%= p @user.admin %>
     <% end %>
     <%= yield %>
   </body>
