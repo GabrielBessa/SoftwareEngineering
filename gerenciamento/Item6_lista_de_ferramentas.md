@@ -2,6 +2,9 @@ Este documento traz uma lista com as principais ferramentas utilizadas no desesn
 
 Foram consideradas ferramentas também os frameworks de programação utilizados.
 
+Giovanni M Guidini - 16/0122660
+Gabriel Bessa      - 16/0120811
+
 ## Ferramentas para gerenciamento do projeto
 
 #### Quadro de KanBan
@@ -23,3 +26,6 @@ Foram consideradas ferramentas também os frameworks de programação utilizados
 - [RSpec](http://rspec.info/)
 - [YARD](https://yardoc.org/index.html)
 
+## Ambiente de Desenvolvimento
+- [Visual Studio Code](https://code.visualstudio.com/) (editor de texto)
+- Extensão para Visual Studio Code [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby), por Peng Lv
