@@ -83,7 +83,7 @@ RSpec.describe RoomsController, type: :controller do
         room = Room.create! valid_attributes
         put :update, params: {id: room.to_param, room: new_attributes}
         room.reload
-        expect(room.number).to eq(10)
+        expect(room.number).to eq(50)
       end
 
       it "redirects to index" do
