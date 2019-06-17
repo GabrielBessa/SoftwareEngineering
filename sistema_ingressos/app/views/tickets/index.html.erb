@@ -9,8 +9,10 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody> 
     <% @tickets.each do |ticket| %>
+    <% @ticket = ticket %>
+    <%= p "Ticket Id: #{@ticket.id}" %>
       <tr>
         <td><%= link_to 'Show', ticket %></td>
         <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
@@ -23,3 +25,4 @@
 <br>
 
 <%= link_to 'New Ticket', new_ticket_path %>
+<%= link_to 'Pagina Inicial', root_path %>
