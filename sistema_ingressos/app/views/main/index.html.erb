@@ -1,60 +1,67 @@
 <div class="container">
   <h1>Página Inicial</h1>
+  <% if current_user != nil %>
+    <li> 
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
+    </li>
 
-  <li> 
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Você tem certeza que quer sair?' } %>
-  </li>
+    <li>
+      <%= link_to 'Evento', events_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Centros de eventos', event_centers_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Tipos de eventos', event_classes_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Apresentações', presentations_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Salas de apresentação', presentation_rooms_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Salas', rooms_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Comprar Ingressos', buy_tickets_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Tipos de ingresso', ticket_types_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Ingressos', tickets_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Pagamento', payments_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Métodos de pagamento', payment_methods_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Locais', addresses_path %>
+    </li>
+
+    <li>
+      <%= link_to 'Cidades', cities_path %>
+    </li>
+
+  <% else %>
+    <li>
+      <%= link_to 'Realizar Cadastro', new_user_registration_path %>
+    </li>
+  <% end %>
   
-  <li>
-    <%= link_to 'Evento', events_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Centros de eventos', event_centers_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Tipos de eventos', event_classes_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Apresentações', presentations_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Salas de apresentação', presentation_rooms_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Salas', rooms_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Comprar Ingressos', buy_tickets_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Tipos de ingresso', ticket_types_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Ingressos', tickets_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Pagamento', payments_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Métodos de pagamento', payment_methods_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Locais', addresses_path %>
-  </li>
-
-  <li>
-    <%= link_to 'Cidades', cities_path %>
-  </li>
 </div>
 
