@@ -25,8 +25,7 @@ Dados a serem consultados:
   - Comprar ingresso
   - cadastrar evento
   - editar evento(mudar variáveis do evento)
-    Para tal, o admin precisa se cadastrar(?) informando cpf e senha. 
-    → DUVIDA: Perguntar pro chacon se não pode ter 1 admin pré-estabelecido já.
+  - Admin terá uma conta pré-estabelecida já.
 
 ## Cadastro de Usuário(Sign up):
   - CPF
